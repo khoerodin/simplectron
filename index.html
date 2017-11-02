@@ -2,24 +2,35 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
-    <style type="text/css">
-      body {
-        -ms-overflow-style: scrollbar;
-        -webkit-app-region:drag;
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Writer</title>
+    <link rel="stylesheet" href="assets/css/quill.bubble.css">
+    <link rel="stylesheet" href="assets/css/github-markdown.css">
+    <style>
+      #editor {
+        
+      }
+      .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+      }
+
+      @media (max-width: 767px) {
+        .markdown-body {
+          padding: 15px;
+        }
       }
     </style>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-
+    <div class="markdown-body"></div>
     <script>
       // You can also require other files to run in this process
       require('./renderer.js')
     </script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
   </body>
 </html>
